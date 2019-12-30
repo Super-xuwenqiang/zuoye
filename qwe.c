@@ -23,18 +23,21 @@ User add() {
     scanf("%d",&u.sex);
     // printf("id:%d 姓名:%s 年龄:%d 性别%d 电话:%d\n",count+1,u.name,u.age,u.sex,u.tel);
     printf("恭喜新增成功\n");
+    // count++;
     return u;
 };
 
+
+//主菜单
 int menu()
  {
-    printf("----主菜单----\n");
+    printf("=========主菜单========\n");
     printf("1.新增会员\n");
     printf("2.查看会员\n");
     printf("3.删除会员\n");
     printf("4.修改会员\n");
-    printf("0.退出\n");
-    printf("\n");
+    printf("5.退出\n");
+    // printf("=========主菜单========\n");
     printf("请输入: ");
 }
 
@@ -55,10 +58,10 @@ void del(int count,User user[])
      int x;
     printf("请您输入需要删除的id：");
     scanf("%d",&x);
-    for(int i = 0; i < count;i++){
+    for(int i = x-1; i < count;i++){
         if(user[i].id == x){
             user[i]  = user[i+1];
-                        
+            count--;
         }
     }
 }
@@ -97,6 +100,7 @@ void modify(int count,User user[])
         menu();
         scanf("%d",&i);
         switch(i){
+            //增加信息
             case 1:
                a = add();
                 user[count].id = count+1;
@@ -106,17 +110,28 @@ void modify(int count,User user[])
                 user[count].tel = a.tel;
                 count++;
                 break;
+                //查询信息
             case 2:
                 sel(count,user);
                 break;
+                //修改信息
             case 3:
                 del(count,user);
                 break;
+                //更改信息
             case 4:
                 modify(count,user);
                 break;
-            case 0:
+                //返回
+            case 5:
                 falg = 0;
+                printf("退出成功!!!\n");
+                break;
+                   //报错
+            default :
+                printf("请输入正确的项目!!!\n");
+                printf("\n");
+                break;
 
         }
      }
