@@ -3,12 +3,12 @@
 #include <sqlite3.h>
 
 int callback(void *para, int col_count, char **col_value, char **col_name) {
-    printf("<div class='box1' style='backgroun:#EE00EE;' ");
+    printf("<div class='box1' style='margin-bottom: 2px;border-radius: 5px;background-color: #EE00EE;width: 500px;margin-left: auto; margin-right: auto; text-align: center;' ");
     printf("<div class='title'><b style='font-size:50px;'>%s</b></div>\n",col_value[1]);
-    printf("<div class='created_at'>%s</div>\n",col_value[3]);
-    printf("<div class='content'>%s</div>\n",col_value[2]);
+    printf("<div class='created_at' style='font-size: 20px;margin-bottom: 2px;border-radius: 5px;background-color: #EE00EE;width: 500px;margin-left: auto; margin-right: auto; text-align: center;' >%s</div>\n",col_value[3]);
+    printf("<div class='content' style='font-size: 20px;margin-bottom: 2px;border-radius: 5px;background-color: #EE00EE;width: 500px;margin-left: auto; margin-right: auto; text-align: center;' >%s</div>\n",col_value[2]);
     printf("</div>\n");
-
+   
     return 0;
 }
 
@@ -48,7 +48,7 @@ int main() {
                 printf("<style>body,list{margin: 0;padding: 0;}</style>");
                 printf("<style>li,ul,ol{list-style:none;}</style>");
                
-                printf("<div style='font-size: 80px;background-color:#969696; line-height:80px; text-align: center;width: color:#fff;'><b>This is div</b></div>");
+                printf("<div style='font-size: 75px;background-color:#969696; line-height:80px; text-align: center;width: color:#fff;'><b>That is not div</b></div>");
 
       
                         sqlite3 *db = NULL;

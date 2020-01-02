@@ -4,7 +4,7 @@
 
 int callback(void *para, int col_count, char **col_value, char **col_name) {
 
-    printf("<li style='background-clor:	#87CEFF;'><a href='hello1.cgi?%s'>%s</a></li>",col_value[0],col_value[1]);
+    printf("<li style='background-color:#87CEFF;border-radius: 4px;line-height: 50px;margin-bottom: 2px;text-align: center;margin-right:auto;margin-left:auto;width:400px;'><a href='hello1.cgi?%s'>%s</a></li>",col_value[0],col_value[1]);
     return 0;
 }
 
