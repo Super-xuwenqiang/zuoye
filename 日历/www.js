@@ -1,10 +1,12 @@
 //顶部显示的box
 var box = document.getElementById('top-conter'); 
 
+
 //往前一个月
 document.getElementById('left').onclick = function(){
     lastMonth();
 }
+
 
 //向后一个月
 document.getElementById('right').onclick = function(){
