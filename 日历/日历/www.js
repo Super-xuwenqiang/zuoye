@@ -25,6 +25,9 @@ var year = date.getFullYear();
 var month = date.getMonth()+1;
 // console.log(month)
 var day = date.getDate();
+
+console.log(date)
+
 var today;
 let nowDate = year + '年' + month + '月' + day + '日';
 box.innerHTML = nowDate;
@@ -57,8 +60,11 @@ function blackdate(){
     var lastMonthDay = getmonthday(year,month);
     console.log(lastMonthDay);
     var lastDay = lastMonthDay - firstDay+1;//上个月第一行第一个是第几天
-    console.log(lastDay);
+    // console.log(lastDay);
     // console.log(dateday)
+
+   
+
 
     var num1 = 1, nextnum = 1;
     for(var i = 0;i < dateday.length;i++){
@@ -133,4 +139,12 @@ function nextMonth(){
     box.innerHTML = nowDate;
     blackdate();
 }
+
+
+
+document.getElementById('top-box').onclick = function(){
+    alert('qwe');
+}
+
+
 
