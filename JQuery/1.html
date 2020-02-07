@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>页面</title>
     <link rel="stylesheet" href="./img/font_imd6x7w1m9/iconfont.css">
+    <script src="img/jquery-1.12.4.min.js"></script>
     <style>
         body, li, ul, ol {
             margin: 0px;
@@ -174,6 +175,109 @@
             color: #EEEE00;
         }
 
+         #box2 #bottom-box .bottom-4-1 .avatar{
+            width:  60px;
+            margin-left: 80px;
+            margin-top: 50px;
+            margin-bottom: 0px;
+        }
+
+
+        #box2 #bottom-box .bottom-4-1 .text-3{
+            font-size: 20px;
+            text-align: center;
+            color: black;
+            line-height: 0px;
+        }
+
+        #box2 #bottom-box .bottom-4-1 .bottom-div{
+            width: 100%;
+            height: 60px;
+            /* background-color: skyblue; */
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        #box2 #bottom-box .bottom-4-1 .bottom-div .denglu{
+            display: inline-block; 
+            height: 30px;
+            width: 80px;
+            background-color: #FFA500;
+            margin-left: 70px;
+
+        }
+
+        #box2 #bottom-box .bottom-4-1 .bottom-div .denglu p{
+            text-align: center;
+            color: #ffff;
+            line-height: 0px;
+            font-size: 15px;
+        }
+
+        #box2 #bottom-box .bottom-4-1 .bottom-div .denglu:hover{
+            cursor: pointer;
+        }
+
+        #box2 #bottom-box .bottom-4-1 .bottom-div .zhuce{
+            display: inline-block;
+            height: 30px;
+            width: 170px;
+            /* border: 2px solid #FFA500; */
+            margin-left: 10px ;
+        }
+
+        #box2 #bottom-box .bottom-4-1 .bottom-div .zhuce p{
+            text-align: center;
+            color: #FFA500;
+            line-height: 0px;
+            font-size: 15px;
+            text-align: right;
+        }
+       
+        #box2 #bottom-box .bottom-4-1 .bottom-div .zhuce :hover{
+            cursor: pointer;
+        }
+
+
+        #box2 #bottom-box .bottom-4-1 .bottom-div1{
+            width: 100%;
+            height: 134px;
+            /* background-color: skyblue; */
+            margin-top: 0px;
+            /* border-right: 1px solid #e5e5e5; */
+        }
+
+
+        #box2 #bottom-box .bottom-4-1 .bottom-1{
+            width: 70px;
+            height: 77px;
+            /* background-color: #000; */
+            display: inline-block;
+        }
+
+        #box2 #bottom-box .bottom-4-1 .bottom-1 .bottom-1-1{
+            font-size: 17px;
+            text-align: center;
+            color:  #CD2626;
+            margin-bottom: 0px;
+            margin-top: 10px;
+
+        }
+
+        #box2 #bottom-box .bottom-4-1 .bottom-1 .bottom-1-2{
+            font-size: 17px;
+            text-align: center;
+            color: #A3A3A3;
+            margin-top: 2px;
+            margin-bottom: 0px;
+        }
+
+        #box2 #bottom-box .bottom-right .login{
+            /* display: none; */
+        }
+
+        #box2 #bottom-box .bottom-right .no-login{
+            /* display: none; */
+        }
 
 
 
@@ -231,8 +335,9 @@
                         <span class="iconfont">&#xe623;</span>
                     </div>
                 </li>
+
                 <li class="bottom-right">
-                    <div class="bottom-4" >
+                    <div class="bottom-4 no-login">
                         <p class="iconfont">&#xebac;</p>
                         <p class="text-3">Hi!欢迎来到阿里云</p>
                         <div class="bottom-div">
@@ -245,6 +350,49 @@
                         </div>
                         <div class="bottom-div1"><p>全民云计算|免费试用</p></div>
                     </div>
+
+                    <div class="bottom-4-1 login">
+                        <img src="" alt="" class="avatar">
+                        <p class="text-3">Hi! <span class="username-1">jack</span> </p>
+                        <div class="bottom-div">
+                            <div class="denglu">
+                                <p>控制台</p>
+                            </div>
+                            <div class="zhuce">
+                                <p>备案专区</p>
+                            </div>
+                    
+                        </div>
+                        <div class="bottom-div1">
+                            <div class="bottom-1">
+                                <p class="bottom-1-1">0</p>
+                                <p class="bottom-1-2">待付款</p>
+                            </div>
+                            <div class="bottom-1">
+                                <p class="bottom-1-1">0</p>
+                                <p class="bottom-1-2">待续费</p>
+                            </div>
+                            <div class="bottom-1">
+                                <p class="bottom-1-1"><span class="point">30</span></p>
+                                <p class="bottom-1-2">积分</p>
+                            </div>
+                            <div class="bottom-1">
+                                <p class="bottom-1-1">0</p>
+                                <p class="bottom-1-2">代金券</p>
+                            </div>
+                            <div class="bottom-1">
+                                <p class="bottom-1-1"><span class="balance">3658.23</span></p>
+                                <p class="bottom-1-2">账户余额</p>
+                            </div>
+                            <div class="bottom-1">
+                                <p class="bottom-1-1"><span class="message">251</span></p>
+                                <p class="bottom-1-2">站内信</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </li>
             </ul>
         </div>
@@ -291,13 +439,50 @@
         }
 
 
-
         // var denglu = document.getElementsByClassName('denglu')[0]
 
 
         document.getElementsByClassName('denglu')[0].onclick = function(){
             window.location.href = './3.html'
         }
+
+
+
+        $(function(){
+
+            var token = localStorage.getItem('token')
+            if(token == null){
+                $('.no-login').show()
+                $('.login').hide()
+            }else{
+
+                $.ajax({
+                    type:'get',
+                    dataType:'json',
+                    url:`http://playground.it266.com/profile?token=${token}`,
+                    success:function(result){
+                        console.log(result)
+                        if(result.status == true){
+                            $('.no-login').hide()
+                            $('.login').show()
+
+                            $('.avatar').attr("src",result.data.avatar)
+                            $('.username-1').html(result.data.username)
+                            $('.point').html(result.data.point)
+                            $('.message').html(result.data.message)
+                            $('.balance').html(result.data.balance)
+                        }else{
+                            $('.no-login').show()
+                            $('.login').hide()
+                        }
+                    }
+                })
+            }
+
+        })
+
+
+
 
     </script>
 </body>
