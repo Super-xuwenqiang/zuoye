@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆页面</title>
+    <script src="img/jquery-1.12.4.min.js"></script>
+    <style>
+        body, ul{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        #big-box{
+            width: 450px;
+            height: 700px;
+            margin: 100px auto;
+            /* background-color: #eeee; */
+        }
+
+        #big-box .box1{
+            width: 400px;
+            height: 100px;
+            /* background-color: skyblue; */
+        }
+
+        #big-box .box1 p{
+            font-size: 60px;
+            text-align: left;
+            line-height: 100px;
+        }
+
+        #big-box .box2{
+            width: 300px;
+            height: 50px;
+            border: 1px solid red;
+            /* visibility: hidden; */
+            display: none;
+            background-color: #FFDEAD;
+        }
+
+        #big-box .box2 p{
+            font-size: 20px;
+            line-height: 0px;
+        }
+
+        #big-box .box3 {
+            margin-top: 20px;
+            width: 300px;
+            height: 50px;
+            /* border: 1px solid #76EE00; */
+            /* background-color: skyblue; */
+        }
+
+        #big-box .box3 input{
+            width: 300px;
+            height: 50px;
+            border: 1px solid #76EE00;
+            font-size: 20px;
+         }
+
+        #big-box .box4{
+            margin-top: 20px;
+            width: 300px;
+            height: 50px;
+            /* border: 1px solid #76EE00; */
+        } 
+
+        #big-box .box4 input{
+            width: 300px;
+            height: 50px;
+            border: 1px solid #76EE00;
+            font-size: 20px;
+        }
+
+        #big-box .box5{
+            margin-top: 20px;
+            width: 300px;
+            height: 50px;
+            /* border: 1px solid #76EE00; */
+        }
+
+        #big-box .box5 input{
+            margin-top: 20px;
+            width: 300px;
+            height: 50px;
+            background-color: #00EE00;
+            color: #ffff;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="big-box">
+        <div class="box1"><p>密码登陆</p></div>
+        <div class="box2">
+            <p>登陆用户名或者密码不正确</p>
+        </div>
+        <div class="box3">
+            <input type="text" placeholder="邮箱/会员名/ID" minlength="4" maxlength="15" class="username">
+        </div>
+        <div class="box4">
+            <input type="password" placeholder="请输入登陆密码" maxlength="15" class="password">
+        </div>
+        <div class="box5">
+            <input type="submit" value="登陆" class="subm">
+        </div>
+    </div>
+
+    <script>
+      // console.log($('.subm')[0])
+      
+
+    $(function(){
+      
+
+        $('.subm').click(function(){
+
+            var username = $('.username').val();
+            console.log(username)
+            var password = $('.password').val();
+
+            if(username == 0){
+                $('.box2')[0].style.display = 'block';
+                return 
+            }
+
+
+            $.ajax({
+                type: "POST",
+                url: "http://playground.it266.com/login",
+                data: {"username": username, "password": password},
+                dataType: "json",
+                success: function (result) {
+                    if (result.status) {  //true
+                        alert("登录成功");
+                        $('.box2')[0].style.display = 'none';
+                        window.location.href = '4.html'
+                        window.localStorage.setItem('token',result.data.token);
+                    }else{
+                        $('.box2')[0].style.display = 'block';
+                        return 
+                    }
+                },
+                error: function () {
+                     alert("出错了")
+                }
+            })
+
+        })
+
+        
+      }) 
+
+    </script>
+</body>
+</html>

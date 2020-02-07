@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>成功页面</title>
+    <link rel="stylesheet" href="./img/font_imd6x7w1m9/iconfont.css">
+    <style>
+        body, li, ul, ol {
+            margin: 0px;
+            padding:  0px;
+            list-style: none;
+        }
+
+        #big-box{
+            width:1000px;
+            height: 800px;
+            /* border: 1px solid black; */
+            background-color: #eee;
+            margin:  50px auto;
+            position: relative;
+        }
+
+        #big-box #img-list li img {
+            position: absolute;
+        }
+
+        #big-box #img-buttom{
+            position: absolute;
+            width: 175px;
+            height: 8px;
+            bottom: 30px;
+            left: 30px;
+            /* border: 1px solid red; */
+        }
+
+        #big-box #img-buttom li{
+            width: 30px;
+            height: 8px;
+            float: left;
+            background-color: #eeee;
+            margin-right: 5px; 
+        }
+
+        #big-box #img-buttom li:hover{
+            background-color: #7CFC00;
+            cursor: pointer;
+        }
+
+        #box1{
+            width: 950px;
+            height: 400px;
+            left: 25px;
+            top: 20px;
+            background-color: #000; 
+            position: absolute;
+        }
+
+        #box2{
+            width: 950px;
+            height: 350px;
+            bottom: 10px;
+            left: 25px;
+            /* background-color: #ffff; */
+            position: absolute;
+        }
+
+        #box2 #bottom-box li {
+            height: 350px;
+            width: 230px;
+            background-color: #ffff;
+            float: left;
+            border-right: 1px solid #e5e5e5;
+            /* border-right: 1px solid #000; */
+        }
+
+        #box2 #bottom-box .bottom-right{
+            margin-left: 27px;
+            border-right: none;
+            /* background-color: pink; */
+        }
+
+        #box2 #bottom-box .bottom-1 .text-1{
+            font-size: 40px;
+            text-align: center;
+            line-height: 100px;
+        }
+
+
+        #box2 #bottom-box .bottom-1 .text-2{
+            font-size: 20px;
+            text-align: center;
+            color: #FFAEB9;
+        }
+
+        #box2 #bottom-box .bottom-1 .iconfont{
+            font-size: 90px;
+            margin-left: 60px;
+        }
+
+
+        #box2 #bottom-box .bottom-4 .iconfont{
+            font-size: 60px;
+            margin-left: 80px;
+            margin-top: 50px;
+            margin-bottom: 0px;
+        }
+
+
+        #box2 #bottom-box .bottom-4 .text-3{
+            font-size: 20px;
+            text-align: center;
+            color: black;
+            line-height: 0px;
+        }
+
+        #box2 #bottom-box .bottom-4 .bottom-div{
+            width: 100%;
+            height: 60px;
+            /* background-color: skyblue; */
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        #box2 #bottom-box .bottom-4 .bottom-div .denglu{
+            display: inline-block; 
+            height: 30px;
+            width: 80px;
+            background-color: #FFA500;
+            margin-left: 70px;
+
+        }
+
+        #box2 #bottom-box .bottom-4 .bottom-div .denglu p{
+            text-align: center;
+            color: #ffff;
+            line-height: 0px;
+            font-size: 15px;
+        }
+
+        #box2 #bottom-box .bottom-4 .bottom-div .denglu:hover{
+            cursor: pointer;
+        }
+
+        #box2 #bottom-box .bottom-4 .bottom-div .zhuce{
+            display: inline-block;
+            height: 30px;
+            width: 170px;
+            /* border: 2px solid #FFA500; */
+            margin-left: 10px ;
+        }
+
+        #box2 #bottom-box .bottom-4 .bottom-div .zhuce p{
+            text-align: center;
+            color: #FFA500;
+            line-height: 0px;
+            font-size: 15px;
+            text-align: right;
+        }
+       
+        #box2 #bottom-box .bottom-4 .bottom-div .zhuce :hover{
+            cursor: pointer;
+        }
+
+
+        #box2 #bottom-box .bottom-4 .bottom-div1{
+            width: 100%;
+            height: 134px;
+            /* background-color: skyblue; */
+            margin-top: 0px;
+            /* border-right: 1px solid #e5e5e5; */
+        }
+
+
+        #box2 #bottom-box .bottom-4 .bottom-1{
+            width: 70px;
+            height: 77px;
+            /* background-color: #000; */
+            display: inline-block;
+        }
+
+        #box2 #bottom-box .bottom-4 .bottom-1 .bottom-1-1{
+            font-size: 17px;
+            text-align: center;
+            color:  #CD2626;
+            margin-bottom: 0px;
+            margin-top: 10px;
+
+        }
+
+        #box2 #bottom-box .bottom-4 .bottom-1 .bottom-1-2{
+            font-size: 17px;
+            text-align: center;
+            color: #A3A3A3;
+            margin-top: 2px;
+            margin-bottom: 0px;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div id="big-box">
+        <div id="box1">
+            <ul id="img-list">
+                <li>
+                    <img src="img/1.jpg" alt="" width="950px" height="400px">
+                </li>
+                <li>
+                    <img src="img/2.jpg" alt="" width="950px" height="400px">
+                </li>
+                <li>
+                    <img src="img/3.jpg" alt="" width="950px" height="400px">
+                </li>
+                <li>
+                    <img src="img/4.jpg" alt="" width="950px" height="400px">
+                </li>
+                <li>
+                    <img src="img/5.jpg" alt="" width="950px" height="400px">
+                </li>
+            </ul>
+            <ul id="img-buttom">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div id="box2">
+            <ul id="bottom-box">
+                <li>
+                    <div class="bottom-1">
+                        <p class="text-1">公司注册</p>
+                        <p class="text-2">1对1免费咨询,助力创业第一步,部分地区仅需68元</p>
+                        <span class="iconfont">&#xe623;</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="bottom-1">
+                        <p class="text-1">公司注册</p>
+                        <p class="text-2">1对1免费咨询,助力创业第一步,部分地区仅需68元</p>
+                        <span class="iconfont">&#xe623;</span>
+                    </div>
+                </li>
+                <li>
+                   <div class="bottom-1">
+                        <p class="text-1">公司注册</p>
+                        <p class="text-2">1对1免费咨询,助力创业第一步,部分地区仅需68元</p>
+                        <span class="iconfont">&#xe623;</span>
+                    </div>
+                </li>
+                <li class="bottom-right">
+                    <div class="bottom-4" >
+                        <p class="iconfont">&#xebac;</p>
+                        <p class="text-3">Hi!jack</p>
+                        <div class="bottom-div">
+                            <div class="denglu">
+                                <p>控制台</p>
+                            </div>
+                            <div class="zhuce">
+                                <p>备案专区</p>
+                            </div>
+                    
+                        </div>
+                        <div class="bottom-div1">
+                            <div class="bottom-1">
+                                <p class="bottom-1-1">0</p>
+                                <p class="bottom-1-2">待付款</p>
+                            </div>
+                            <div class="bottom-1">
+                                <p class="bottom-1-1">0</p>
+                                <p class="bottom-1-2">待续费</p>
+                            </div>
+                            <div class="bottom-1">
+                                <p class="bottom-1-1">30</p>
+                                <p class="bottom-1-2">积分</p>
+                            </div>
+                            <div class="bottom-1">
+                                <p class="bottom-1-1">0</p>
+                                <p class="bottom-1-2">代金券</p>
+                            </div>
+                            <div class="bottom-1">
+                                <p class="bottom-1-1">3658.23</p>
+                                <p class="bottom-1-2">账户余额</p>
+                            </div>
+                            <div class="bottom-1">
+                                <p class="bottom-1-1">251</p>
+                                <p class="bottom-1-2">站内信</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+<script>
+    var list = document.getElementById('img-list');
+    var img = list.getElementsByTagName('img');
+    var li = document.getElementById('img-buttom').getElementsByTagName('li');
+    console.log(li)
+
+    var num = 0;
+
+    run();
+    timer = setInterval(run,3000);
+
+    function run(){
+        if(num>=img.length){
+            num = 0
+        }
+        showimg(num);
+        num++;
+    }
+
+    //自动显示
+    function showimg(n){
+        for(var i = 0;i<img.length;i++){
+            img[i].style.opacity = 0; 
+            li[i].style.background = '#eeee';
+        }
+        img[n].style.opacity = 1;
+        li[n].style.background = '#7CFC00';
+    }
+
+    //手动显示
+    for(var i = 0; i < li.length; i++){
+        (function(m){
+            li[m].onclick = function(){
+                clearInterval(timer);
+                showimg(m);
+                num = m; 
+                timer = setInterval(run, 3000);
+            }
+        })( i );
+    }
+</script>
+</body>
+</html>
