@@ -1,0 +1,13 @@
+#banner{
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    height: 200px;
+    /* background-color: skyblue; */
+    background: url(./img/5.jpg) no-repeat center;
+    background-size: 100% 200px;
+}
+
+#banner ul li img{
+    position: absolute;
+}

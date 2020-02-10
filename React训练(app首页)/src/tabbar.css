@@ -1,0 +1,21 @@
+#tabbar{
+    height: 50px;
+    width: 80%;
+    background-color: darkkhaki;
+    margin-left: 10%;
+}
+
+#tabbar ul li {
+    float: left;
+    margin-left: 22px;
+}
+
+#tabbar ul li img{
+    margin-left: 5px;
+    margin-top: 5px;
+
+}
+
+#tabbar ul li p{
+    margin-top: -7px;
+}
