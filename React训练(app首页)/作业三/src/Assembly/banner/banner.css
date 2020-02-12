@@ -1,0 +1,12 @@
+#banner{
+    position: relative;
+    width: 80%;
+    height: 200px;
+    background-size: 100% 200px;
+    margin: 5px 10%;
+  
+}
+
+#banner ul li img{
+    position: absolute;
+}

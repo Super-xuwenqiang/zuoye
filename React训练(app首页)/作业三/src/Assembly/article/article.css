@@ -1,0 +1,31 @@
+#big-box{
+    position: relative;
+    width: 80%;
+    height: 100px;
+    margin-left: 10%;
+    margin-top: 0px;
+    border-bottom: 1px solid #FFAEB9;
+}
+
+#big-box .text-2{
+    width: 200px;
+    height: 90px;
+    position: absolute;
+}
+
+#big-box .text-2 p{
+    font-size: 15px;
+    line-height: 60px;
+    padding-left: 10px;
+}
+
+#big-box .text-3{
+    height: 90px;
+    width: 100px;
+    background: url(../../img/7.jpg) no-repeat center ;
+    background-size: 100px 100px;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 67%;
+}
+
